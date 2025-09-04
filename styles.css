@@ -1,0 +1,100 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #fff;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --success: #22c55e;
+  --warning: #f59e0b;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f9f9f9;
+  --card: #2a2a2a;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+header h1 { margin: 0; font-size: 1.6rem; }
+
+header button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: var(--primary);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header button:hover { background: var(--primary); color: white; }
+
+main { padding: 1rem; display: grid; gap: 2rem; }
+
+section {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+form label { display: block; margin: 0.5rem 0; font-weight: 500; }
+form input { padding: 0.6rem; width: 100%; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+
+form button, #clear-history, #export-excel, #export-pdf {
+  margin-top: 0.7rem; padding: 0.8rem; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s;
+}
+
+form button { background: var(--primary); color: white; }
+form button:hover { background: #1d4ed8; }
+
+#clear-history { background: var(--danger); color: white; }
+#clear-history:hover { background: #b91c1c; }
+
+#export-excel { background: #16a34a; color: white; }
+#export-excel:hover { background: #15803d; }
+
+#export-pdf { background: #f59e0b; color: white; }
+#export-pdf:hover { background: #d97706; }
+
+#exam-history { list-style: none; padding: 0; }
+#exam-history li { padding: 0.8rem; border-bottom: 1px solid #ddd; line-height: 1.6; font-size: 0.95rem; border-radius: 6px; margin-bottom: 0.4rem; transition: 0.3s; }
+#exam-history li:hover { background: rgba(0,0,0,0.03); }
+
+#legend { margin-top: 10px; padding: 10px; background: #f0f0f0; border-radius: 6px; font-size: 0.9rem; color: #333; }
+body.dark #legend { background: #2a2a2a; color: #f9f9f9; }
+
+footer { text-align: center; padding: 1rem; margin-top: 2rem; background: var(--primary); color: white; font-weight: bold; }
+
+canvas { width: 100% !important; max-height: 350px; }
+
+.buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+
+@media (max-width: 600px){
+  main { padding: 0.5rem; gap: 1rem; }
+  header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  form input, form button, #clear-history, #theme-toggle, #export-excel, #export-pdf { width: 100%; font-size: 1rem; }
+  #exam-history li { font-size: 0.9rem; line-height: 1.4; }
+  #legend { font-size: 0.85rem; padding: 8px; }
+  canvas { max-height: 250px; }
+}
