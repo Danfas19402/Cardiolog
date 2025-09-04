@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARDIOLOG</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CARDIOLOG</h1>
+  <button id="theme-toggle">🌙 Tema</button>
+</header>
+
+<main>
+  <!-- Registrar Exame -->
+  <section>
+    <h2>Registrar Exame</h2>
+    <form id="exam-form">
+      <label>Data:<input type="date" id="exam-date" required></label>
+      <label>Colesterol (mg/dL):<input type="number" id="cholesterol" required></label>
+      <label>Triglicerídeos (mg/dL):<input type="number" id="triglycerides" required></label>
+      <button type="submit">Adicionar</button>
+    </form>
+  </section>
+
+  <!-- Histórico -->
+  <section>
+    <h2>Histórico de Exames</h2>
+    <ul id="exam-history"></ul>
+    <div class="buttons">
+      <button id="clear-history">🗑️ Limpar Histórico</button>
+      <button id="export-excel">📊 Exportar Excel</button>
+      <button id="export-pdf">📝 Exportar PDF</button>
+    </div>
+    <div id="legend">
+      <strong>Legenda:</strong> ✅ Normal &nbsp;&nbsp; ⚠️ Atenção &nbsp;&nbsp; 🚨 Alto risco
+    </div>
+  </section>
+
+  <!-- Gráfico -->
+  <section>
+    <h2>Evolução dos Exames</h2>
+    <canvas id="examChart"></canvas>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 CARDIOLOG - Controle de Saúde</p>
+</footer>
+
+<!-- Bibliotecas externas -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
