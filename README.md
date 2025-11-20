@@ -1,6 +1,6 @@
 🫀 CARDIOLOG
 
-O CARDIOLOG é uma aplicação web responsiva desenvolvida com HTML, CSS e JavaScript para auxiliar no acompanhamento da saúde cardiovascular, com foco no controle de colesterol e triglicerídeos.
+🚨 O CARDIOLOG é uma aplicação web responsiva desenvolvida com HTML, CSS e JavaScript para auxiliar no acompanhamento da saúde cardiovascular, com foco no controle de colesterol e triglicerídeos.
 
 ⚙️ Funcionalidades
 
